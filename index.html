@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Интерактивный плакат</title>
     <style>
-        body { margin: 0; background: #000; display: flex; justify-content: center; }
+        body { margin: 0; background: #000; display: flex; justify-content: center; overflow-x: hidden; }
         .map-wrapper { position: relative; display: inline-block; }
         img { display: block; max-width: 100%; height: auto; }
         
@@ -21,7 +21,7 @@
             max-width: 250px;
             border: 1px solid #666;
             line-height: 1.3;
-            /* Чтобы текст не перекрывал саму мышку, чуть сместим вверх */
+            /* Облачко теперь прямо над острием мышки */
             transform: translate(5px, -100%); 
         }
     </style>
@@ -33,35 +33,76 @@
     <img src="MEITU_20260501_154403322.jpg" usemap="#image-map">
 
     <map name="image-map">
+        <area target="_blank" alt="Виктуар де Кастеллан" title="Европейская аристократка, ворвавшаяся в мир моды" href="https://cyclowiki.org/wiki/%D0%94%D0%B5_%D0%9A%D0%B0%D1%81%D1%82%D0%B5%D0%BB%D0%BB%D0%B0%D0%BD,_%D0%92%D0%B8%D0%BA%D1%82%D1%83%D0%B0%D1%80" coords="607,286,614,262,602,236,617,185,606,202,636,175,676,163,713,179,731,208,744,262,769,329,793,389,790,440,792,494,796,566,790,591,763,611,753,644,783,707,790,790,787,867,796,939,803,1003,805,1021,702,1016,699,993,739,996,740,966,685,819,662,761,664,798,649,789,646,758,655,732,629,668,643,602,619,638,579,630,567,618,585,610,559,606,606,603,616,610,631,567,625,547,633,507,635,470,667,371,650,369,635,352,637,331,626,309,618,290" shape="poly">
+        <area target="_blank" alt="Ильгиз Фазулзянов" title="Один из лучших мастеров, парень из Казани" href="https://ilgiz.com/?locale=ru" coords="167,252,121,291,79,325,58,377,54,432,40,496,28,527,39,577,63,585,68,634,81,635,63,704,77,780,75,811,79,908,200,726,208,720,209,707,247,699,246,643,245,618,251,607,251,586,287,600,301,595,303,605,322,607,351,615,385,599,366,575,351,573,297,535,327,529,290,517,258,431,262,331,241,307,243,288,263,298,284,290,298,255,324,165,271,119,212,115,179,154,179,194,177,220" shape="poly">
+
+        <area target="_blank" alt="Страна самоцветов" title="Страна самоцветов - антропоморфные камни" href="https://rutube.ru/plst/598113/" coords="394,583,422,575,443,587,447,603,449,629,441,627,439,640,431,665,416,672,403,659,394,628,385,631" shape="poly">
+        <area target="_blank" alt="Ювелир Ричард" title="Загадочные дела ювелира Ричарда" href="https://rutube.ru/plst/888719/" coords="480,663,471,642,468,623,473,607,490,591,505,597,517,596,537,611,543,639,536,645,533,662,522,664,499,664" shape="poly">
+        <area target="_blank" alt="Драгоценности Рури" title="История о Рури Танигаве" href="https://rutube.ru/plst/1139781/" coords="475,718,487,703,488,687,524,675,541,690,536,702,545,725,537,747,525,747,502,755,481,749" shape="poly">
+        <area target="_blank" alt="Путешествие коллекционера" title="Редчайшие ресурсы в магическом мире" href="https://old.yummyani.me/catalog/item/souzai-saishuka-no-isekai-ryokouki" coords="382,702,375,690,381,674,411,675,425,699,434,711,435,723,426,743,399,749,378,738,372,722" shape="poly">
+        <area target="_blank" alt="Неограненные алмазы" title="Изнанка ювелирного квартала Нью-Йорка" href="https://rutube.ru/video/14e063e4a30958f67204843109a09982/" coords="169,830,168,808,204,771,218,770,221,787,240,807,263,808,310,785,312,776,344,776,315,819,311,837,156,831,156,848,303,871,332,843,323,829,303,847" shape="poly">
+        <area target="_blank" alt="Ювелирная лавка" title="История влюбленных Анджея и Терезы" href="https://vk.com/video-21617376_456243555" coords="170,855,167,878,307,886,335,851,331,840,307,872" shape="poly">
+        <area target="_blank" alt="Каменный цветок" title="Сказ Данилки Недокормыша" href="https://rutube.ru/video/3d5e9c3216f4a5634a06203f42e6b0c4/" coords="163,875,161,880,161,902,303,911,338,874,335,856,295,888,176,882,169,880" shape="poly">
+        <area target="_blank" alt="Ювелиры" title="Эдди Миллер и торговля бриллиантами" href="https://www.kinopoisk.ru/film/4618/" coords="164,906,173,930,319,937,346,893,336,873,319,913" shape="poly">
+        <area target="_blank" alt="Клан ювелиров" title="Борьба за влияние и интриги" href="https://vk.com/video-212755344_456239565" coords="319,815,351,772,367,760,447,882,415,935,392,944" shape="poly">
+        <area target="_blank" alt="История ювелиров" title="Коротко о профессии" href="https://rutube.ru/video/c6cc4d620b1d4338901770a44b3e82f4/" coords="33,693,55,694,54,739,58,782,67,785,70,810,20,827,11,813,11,798,46,789,27,767" shape="poly">
+
+        <area target="_blank" alt="Bobby White" title="Безумно дорогие и сложные украшения" href="https://www.youtube.com/@BobbyWhite/videos" coords="438,819,491,803,539,791,611,903,545,931,499,948" shape="poly">
+        <area target="_blank" alt="Pablo Cimadevila" title="Эстетичные видео ювелира-паралимпийца" href="https://www.youtube.com/@PabloCimadevila" coords="546,793,554,791,651,883,567,950,545,932,616,903" shape="poly">
+        <area target="_blank" alt="MDTC Jewelry" title="Огранка камней в форме персонажей" href="https://www.youtube.com/@MDTCJewelry" coords="547,787,566,776,685,869,602,937,592,936,653,880" shape="poly">
+
+        <area target="_blank" alt="Splendor" title="Экономика драгоценных камней" href="https://lifestyleltd.ru/games/splendor/" coords="451,399,445,308,547,311,547,405,482,399" shape="poly">
+        <area target="_blank" alt="Jewel Master" title="Классика три-в-ряд" href="https://www.igromania.ru/game/series/755/Jewel_Master.html" coords="450,399,547,401,544,511,473,505,475,440,445,429" shape="poly">
+        <area target="_blank" alt="SKYRIM" title="Создание колец и ожерелий" href="https://www.youtube.com/watch?v=gmJjMfjakX4" coords="547,312,626,319,626,330,631,335,636,366,644,374,643,409,545,400" shape="poly">
+        <area target="_blank" alt="The Witcher 3" title="Квесты на поиск чертежей ювелиров" href="https://www.youtube.com/watch?v=JoXk1eojlAs" coords="547,403,644,408,632,457,630,519,543,508" shape="poly">
+
+        <area target="_blank" alt="Shortparis — Золото" title="Арт-рок рефлексия" href="https://vk.com/audio-2001597845_116597845" coords="31,43,118,45,119,125,34,129" shape="poly">
+        <area target="_blank" alt="Rammstein — Diamant" title="Холодная красота бриллианта" href="https://vk.com/audio179847410_456240093_6385a8d5e148564aab" coords="142,43,238,42,237,105,183,131,142,127" shape="poly">
+        <area target="_blank" alt="Arctic Monkeys" title="Jeweller's Hands - хрупкие вещи" href="https://vk.com/audio-2001468395_36468395" coords="266,43,357,40,355,131,300,128,265,112" shape="poly">
+        <area target="_blank" alt="Prince — Diamonds and Pearls" title="Символ чистой любви" href="https://vk.com/audio-2001568205_5568205" coords="28,157,115,159,121,247,31,251" shape="poly">
+        <area target="_blank" alt="The Beatles" title="The Beatles — Lucy in the Sky with Diamonds" href="https://vk.com/audio-11839735_456245484_3b841c2fde8f34d536" coords="146,157,169,160,164,243,147,246,147,221" shape="poly">
+        <area target="_blank" alt="Наутилус Помпилиус" title="Бриллиантовые дороги" href="https://vk.com/audio-2001877895_33877895" coords="327,162,355,163,359,247,317,251,315,222" shape="poly">
+        <area target="_blank" alt="Мумий Тролль — Алмазы" title="Морская загадочная атмосфера" href="https://vk.com/audio-2001799814_35799814" coords="34,283,114,280,115,291,70,320,60,369,35,370" shape="poly">
+        <area target="_blank" alt="Madonna — Material Girl" title="Гимн меркантильности 80-х" href="https://vk.com/audio-2001427891_7427891" coords="287,287,360,289,362,378,277,376,275,322" shape="poly">
+
+        <area target="_blank" alt="Дюма — Ожерелье королевы" title="Афера с бриллиантовым колье" href="https://royallib.com/book/dyuma_aleksandr/ogerele_korolevi.html" coords="435,45,459,44,457,196,432,196" shape="poly">
+        <area target="_blank" alt="Коллинз — Лунный камень" title="Детектив о желтом алмазе" href="https://www.livelib.ru/book/1015480990-lunnyj-kamen-uilki-kollinz" coords="463,70,485,65,487,194,464,195" shape="poly">
+        <area target="_blank" alt="Бажов — Малахитовая шкатулка" title="Уральские самоцветы" href="https://nukadeti.ru/skazki/pavel-bazhov-malakhitovaya-shkatulka" coords="489,99,499,96,503,199,491,196" shape="poly">
+        <area target="_blank" alt="Толкин — Сильмариллион" title="Война за свет Древ" href="https://www.livelib.ru/book/19286/editions" coords="502,51,527,51,527,197,503,195" shape="poly">
+        <area target="_blank" alt="Сандерсон — Архив Буресвета" title="Изумруды как батарейки магии" href="https://www.livelib.ru/book/1001547246-arhiv-buresveta-kniga-1-put-korolej-brendon-sanderson" coords="529,75,553,77,554,198,527,198" shape="poly">
+        <area target="_blank" alt="Шевалье — Девушка с жемчужной серёжкой" title="Символ социального статуса" href="https://www.livelib.ru/book/1005933805-devushka-s-zhemchuzhnoj-serezhkoj-trejsi-shevale" coords="543,70,553,61,570,55,587,193,567,197,553,76" shape="poly">
+        <area target="_blank" alt="Донна Тартт — Щегол" title="Реставрация и жизнь вещей" href="https://www.livelib.ru/story/64889-schegol-donna-tartt" coords="576,78,595,73,622,181,603,199,594,193,580,124" shape="poly">
+        <area target="_blank" alt="Перес-Реверте — Кожа для барабана" title="Интриги Ватикана" href="https://www.livelib.ru/book/1006812433-kozha-dlya-barabana-arturo-peresreverte" coords="636,171,626,154,649,147,767,151,769,173,651,168" shape="poly">
+        <area target="_blank" alt="Таймлесс" title="Путешественники во времени и камни" href="https://www.livelib.ru/book/1008320665-tajmless-rubinovaya-kniga-kerstin-gir" coords="714,174,775,173,775,195,729,199" shape="poly">
+
+        <area target="_blank" alt="Инструменты ювелира" title="Базовый набор инструментов" href="https://youtu.be/RfDmwmgT1SY?si=YXR4xbmz9zEbEJKb" coords="331,551,332,535,340,529,337,508,364,486,370,424,473,441,472,498,457,505,467,541,435,565,411,570" shape="poly">
+        <area target="_blank" alt="Шкала Мооса" title="Твердость минералов" href="https://ru.wikipedia.org/wiki/%D0%A8%D0%BA%D0%B0%D0%BB%D0%B0_%D0%9C%D0%BE%D0%BE%D1%81%D0%B0" coords="491,301,499,226,595,227,607,260,603,281,613,305" shape="poly">
+        <area target="_blank" alt="Месторождения" title="Крупные месторождения камней" href="https://maxim-demidov.ru/blog/krupnie-i-izvestnije-mestorozdenija" coords="655,149,662,25,815,17,819,169,768,167,762,144" shape="poly">
+        <area target="_blank" alt="Тест: украшение" title="Какое ты украшение?" href="https://uquiz.com/quiz/1go6wl/%D0%BA%D0%B0%D0%BA%D0%BE%D0%B5-%D1%82%D1%8B-%D1%83%D0%BA%D1%80%D0%B0%D1%88%D0%B5%D0%BD%D0%B8%D0%B5" coords="794,445,790,433,795,397,816,416,819,465" shape="poly">
+        <area target="_blank" alt="Тест: минерал" title="Какой ты минерал?" href="https://uquiz.com/quiz/LibBYg/%D0%9A%D0%BA%D0%BE%D0%B9-%D0%92%D1%8B-%D0%BC%D0%B8%D0%BD%D0%B5%D1%80%D0%B0%D0%BB" coords="791,488,792,450,819,464,819,513" shape="poly">
+
         <area target="_blank" alt="О работе ювелиров" title="О работе ювелиров" href="https://youtu.be/ZxqNCLqzIwg?si=55lej_JDqbQk9MEx" coords="209,713,279,696,282,738,307,750,302,768,307,782,256,802,237,804,220,789,220,763,208,756" shape="poly">
         <area target="_blank" alt="Почему" title="Почему" href="https://vk.com/@876797360-hvatit-gruzit-pochemu-zumery-vybiraut-ne-professiu-a-vaib" coords="370,296,379,285,391,287,399,282,406,263,416,265,415,287,426,283,444,286,451,298,439,319,439,335,429,340,415,347,415,323,407,320,394,319,378,318,372,310" shape="poly">
-        <area target="_blank" alt="The Beatles — Lucy in the Sky with Diamonds" title="The Beatles — Lucy in the Sky with Diamonds" href="https://vk.com/audio-11839735_456245484_3b841c2fde8f34d536" coords="146,157,169,160,164,243,147,246,147,221" shape="poly">
-     <area target="_blank" alt="Виктуар де Кастеллан" title="Виктуар де Кастеллан" href="https://cyclowiki.org/wiki/%D0%94%D0%B5_%D0%9A%D0%B0%D1%81%D1%82%D0%B5%D0%BB%D0%BB%D0%B0%D0%BD,_%D0%92%D0%B8%D0%BA%D1%82%D1%83%D0%B0%D1%80" coords="607,286,614,262,602,236,617,185,606,202,636,175,676,163,713,179,731,208,744,262,769,329,793,389,790,440,792,494,796,566,790,591,763,611,753,644,783,707,790,790,787,867,796,939,803,1003,805,1021,702,1016,699,993,739,996,740,966,685,819,662,761,664,798,649,789,646,758,655,732,629,668,643,602,619,638,579,630,567,618,585,610,559,606,606,603,616,610,631,567,625,547,633,507,635,470,667,371,650,369,635,352,637,331,626,309,618,290" shape="poly">
-        <area target="_blank" alt="Ильгиз Фазулзянов" title="Ильгиз Фазулзянов" href="https://ilgiz.com/?locale=ru" coords="167,252,121,291,79,325,58,377,54,432,40,496,28,527,39,577,63,585,68,634,81,635,63,704,77,780,75,811,79,908,200,726,208,720,209,707,247,699,246,643,245,618,251,607,251,586,287,600,301,595,303,605,322,607,351,615,385,599,366,575,351,573,297,535,327,529,290,517,258,431,262,331,241,307,243,288,263,298,284,290,298,255,324,165,271,119,212,115,179,154,179,194,177,220" shape="poly">
-        <area target="_blank" alt="Страна самоцветов" title="Страна самоцветов" href="https://rutube.ru/plst/598113/" coords="394,583,422,575,443,587,447,603,449,629,441,627,439,640,431,665,416,672,403,659,394,628,385,631" shape="poly">
-        <area target="_blank" alt="Загадочные дела ювелира Ричарда" title="Загадочные дела ювелира Ричарда" href="https://rutube.ru/plst/888719/" coords="480,663,471,642,468,623,473,607,490,591,505,597,517,596,537,611,543,639,536,645,533,662,522,664,499,664" shape="poly">
-        <area target="_blank" alt="Bobby White" title="Bobby White" href="https://www.youtube.com/@BobbyWhite/videos" coords="438,819,491,803,539,791,611,903,545,931,499,948" shape="poly">
-        <area target="_blank" alt="Pablo Cimadevila" title="Pablo Cimadevila" href="https://www.youtube.com/@PabloCimadevila" coords="546,793,554,791,651,883,567,950,545,932,616,903" shape="poly">
-        <area target="_blank" alt="MDTC Jewelry" title="MDTC Jewelry" href="https://www.youtube.com/@MDTCJewelry" coords="547,787,566,776,685,869,602,937,592,936,653,880" shape="poly">
-        <area target="_blank" alt="Splendor" title="Splendor" href="https://lifestyleltd.ru/games/splendor/" coords="451,399,445,308,547,311,547,405,482,399" shape="poly">
-        <area target="_blank" alt="The Witcher 3" title="The Witcher 3" href="https://www.youtube.com/watch?v=JoXk1eojlAs" coords="547,403,644,408,632,457,630,519,543,508" shape="poly">
-        <area target="_blank" alt="Rammstein — Diamant" title="Rammstein — Diamant" href="https://vk.com/audio179847410_456240093_6385a8d5e148564aab" coords="142,43,238,42,237,105,183,131,142,127" shape="poly">
-        <area target="_blank" alt="Бажов — Малахитовая шкатулка" title="Бажов — Малахитовая шкатулка" href="https://nukadeti.ru/skazki/pavel-bazhov-malakhitovaya-shkatulka" coords="489,99,499,96,503,199,491,196" shape="poly">
     </map>
 </div>
 
 <script>
     const tooltip = document.getElementById('tooltip');
-    const areas = document.querySelectorAll('area');
+    const wrapper = document.querySelector('.map-wrapper');
 
-    areas.forEach(area => {
+    document.querySelectorAll('area').forEach(area => {
         area.addEventListener('mouseenter', () => {
             tooltip.textContent = area.title;
             tooltip.style.display = 'block';
         });
         area.addEventListener('mousemove', (e) => {
-            tooltip.style.left = e.pageX + 'px';
-            tooltip.style.top = e.pageY + 'px';
+            // Находим позицию мышки относительно контейнера
+            const rect = wrapper.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            tooltip.style.left = x + 'px';
+            tooltip.style.top = y + 'px';
         });
         area.addEventListener('mouseleave', () => {
             tooltip.style.display = 'none';
@@ -71,3 +112,4 @@
 
 </body>
 </html>
+[cite_start]
